@@ -28,8 +28,14 @@ variable "enabled" {
 
 variable "keep_divergent_refs" {
   type        = bool
-  default     = false
+  default     = true
   description = "Determines if divergent refs are skipped"
+}
+
+variable "mirror_branch_regex" {
+  type        = string
+  default     = null
+  description = "Contains a regular expression. Only branches with names matching the regex are mirrored. Requires only_protected_branches to be disabled. Premium and Ultimate only"
 }
 
 variable "only_protected_branches" {

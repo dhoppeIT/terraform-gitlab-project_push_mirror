@@ -1,4 +1,4 @@
-module "gitlab_project_mirror" {
+module "gitlab_project_push_mirror" {
   source = "../../"
 
   project = data.gitlab_project.this.id
